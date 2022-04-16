@@ -1,0 +1,22 @@
+body{
+    background: url("1.jpg") no-repeat center;
+    object-fit: cover;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+
+}
+
+form > * {
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+.listele a{
+  text-decoration: none;
+  color: aliceblue;
+}

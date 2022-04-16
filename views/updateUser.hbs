@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css" />
+
+
+    <title>Personel Kayıt Sistemi</title>
+  </head>
+
+<body style="background:#feebed">
+
+    {{#each row}}
+    <form id="UpdateUserForm" action="/users/update/{{this.id}}" method="POST" class="col-4 mx-auto mt-5">
+        <h3 style="letter-spacing: 2px; text-align:center; color: #c28efa">PERSONEL GÜNCELLEME SAYFASI</h3>
+        <div class="input-group mt-4">
+            <span class="input-group-text" style="background-color: #E9D4FF;">AD</span>
+            <input type="text" aria-label="AD" class="form-control" id="adi" name="adi" value="{{this.adi}}" />
+        </div>
+
+        <div class="input-group mt-4">
+            <span class="input-group-text" style="background-color: #E9D4FF;">SOYAD</span>
+            <input type="text" aria-label="SOYAD" class="form-control" id="soyadi" name="soyadi"
+                value="{{this.soyadi}}" />
+        </div>
+
+        <div class="input-group mt-4">
+            <span class="input-group-text" style="background-color: #E9D4FF;">E-POSTA</span>
+            <input type="email" aria-label="E-POSTA" class="form-control" id="eposta" name="eposta"
+                value="{{this.eposta}}" />
+        </div>
+
+        <div class="input-group mt-4">
+            <span class="input-group-text" style="background-color: #E9D4FF;">YAŞ</span>
+            <input type="text" aria-label="YAŞ" class="form-control" id="yas" name="yas" value="{{this.yas}}" />
+        </div>
+
+        <div class="input-group mt-4">
+            <span class="input-group-text" style="background-color: #E9D4FF;">ÜNVAN</span>
+            <input type="text" aria-label="ÜNVAN" class="form-control" id="unvan" name="unvan"
+                value="{{this.unvan}}" />
+        </div>
+
+        <div class="input-group mt-4">
+            <span class="input-group-text" style="background-color: #E9D4FF;">DEPARTMAN</span>
+            <input type="text" aria-label="DEPARTMAN" class="form-control" id="departman" name="departman"
+                value="{{this.departman}}" />
+        </div>
+
+        <div class="input-group mt-4">
+            <span class="input-group-text" style="background-color: #E9D4FF;">AÇIKLAMA </span>
+            <input type="text" aria-label="AÇIKLAMA" class="form-control" id="aciklama" name="aciklama"
+                value="{{this.aciklama}} " />
+        </div>
+        <div class="input-group mt-4 d-grid gap-2 col-3 ">
+            <button class="btn btn-success" type="submit">Güncelle</button>
+        </div>
+    </form>
+    {{/each}}
+</body>
+
+</html>
