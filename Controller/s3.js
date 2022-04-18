@@ -8,8 +8,8 @@ const randomBytes = promisify(crypto.randomBytes);
 dotenv.config();
 const region = "us-west-2";
 const bucketName = "my-project-s3-bucket-bb";
-const accessKeyId = "AKIAUHAEJQTEY22GXCO3";
-const secretAccessKey = "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";
+const accessKeyId = "";
+const secretAccessKey = "";
 
 // s3 bucket bağlantısı sağlamak için
 const s3 = new aws.S3({

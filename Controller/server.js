@@ -20,9 +20,9 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
 
 //veritabanı bilgileri 
 const db = mysql.createConnection({
-    host: "bulut-db.ciqicwmrkgtx.us-east-1.rds.amazonaws.com",
-    user: "admin",
-    password: "Bucat_FZT_Btl_Bsr_1256",
+    host: "",
+    user: "",
+    password: "",
     database: "bulutrds"
 });
 //veritabanı bağlantısı
